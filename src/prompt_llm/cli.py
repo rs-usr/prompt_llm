@@ -133,7 +133,6 @@ def anthropic(prompt: str):
         response = call(prompt, app_config)
         print_response(response, ANTHROPIC)
 
-
 @app.command()
 def google(prompt: str):
     """To prompt GOOGLE"""
@@ -173,7 +172,6 @@ def nvidia(prompt: str):
         response = call(prompt, app_config)
         print_response(response, NVIDIA)
 
-
 @app.command()
 def fireworks(prompt: str):
     """To prompt FIREWORKS"""
@@ -188,7 +186,7 @@ def fireworks(prompt: str):
         print_response(response, FIREWORKS)
 
 @app.command()
-def grow(prompt: str):
+def groq(prompt: str):
     """To prompt GROQ"""
     app_config = load_config()
 
@@ -199,7 +197,6 @@ def grow(prompt: str):
 
         response = call(prompt, app_config)
         print_response(response, GROQ)
-
 
 @app.command()
 def together(prompt: str):
