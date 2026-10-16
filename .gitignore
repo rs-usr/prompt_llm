@@ -1,4 +1,7 @@
-build/*
-mycli/*
-__pycache__
-dist
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/

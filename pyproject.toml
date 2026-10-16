@@ -5,17 +5,19 @@ build-backend = "hatchling.build"
 [project]
 name = "prompt_llm"
 dynamic = ["version"]
-dependencies = ["typer", "langchain-core", "langchain-openai", "langchain-mistralai", "langchain-google-vertexai", "langchain-cohere", "langchain-nvidia-ai-endpoints", "langchain-fireworks", "langchain-groq"]
+dependencies = []
 
 authors = [
   { name="Reego Software", email="reego.software@gmail.com" },
 ]
-description = "A CLI tool to prompt LLMs by reego.software"
+description = "A zero-dependency CLI tool to prompt LLMs by reego.software"
+keywords = ["llm", "cli", "openai", "anthropic", "claude", "gemini", "mistral", "groq", "ollama", "tool-calling"]
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.10"
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
+    "Environment :: Console",
     "Operating System :: OS Independent",
 ]
 
@@ -24,7 +26,7 @@ Homepage = "https://github.com/reego-software/prompt_llm"
 Issues = "https://github.com/reego-software/prompt_llm/issues"
 
 [project.scripts]
-prompt_llm = "prompt_llm.cli:app"
+prompt_llm = "prompt_llm.cli:main"
 
 [tool.hatch.version]
 path = "src/prompt_llm/__init__.py"
