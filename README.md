@@ -159,7 +159,10 @@ PYTHONPATH=src python -m unittest discover -s tests
 
 ## Publish
 
-```sh
-python -m build
-python3 -m twine upload --repository pypi dist/* --verbose
-```
+Releases are published to PyPI by `.github/workflows/release.yml` using trusted publishing:
+
+1. Bump `__version__` in `src/prompt_llm/__init__.py` and the version at the top of this README, then commit and push.
+2. Create a GitHub release with a matching tag: `gh release create v0.2.1 --generate-notes`
+
+The workflow runs the tests, checks that the tag matches the package version, builds and uploads.
+To publish an existing tag, run the workflow manually: Actions → Release → Run workflow, then enter the tag.

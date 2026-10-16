@@ -22,8 +22,8 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/reego-software/prompt_llm"
-Issues = "https://github.com/reego-software/prompt_llm/issues"
+Homepage = "https://github.com/rs-usr/prompt_llm"
+Issues = "https://github.com/rs-usr/prompt_llm/issues"
 
 [project.scripts]
 prompt_llm = "prompt_llm.cli:main"
